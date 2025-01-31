@@ -1,0 +1,82 @@
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+img {
+    cursor: pointer;
+    
+}
+
+.pokemon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    -webkit-box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
+    -moz-box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
+    box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
+    cursor: pointer;
+    padding-bottom: 10%;
+    width: 350px;
+    height: 300px;
+
+    
+    
+}
+
+.card:hover {
+    background-color: #EAB308;
+    scale: 1.05;
+    transition: all;
+    transition-duration: 350ms;
+
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.img {
+    align-items: center;
+}
+
+.pokedex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding-top: 100px;
+}
+
+#menu:hover {
+    scale: 1.05;
+    transition: all;
+    transition-duration: 300ms;
+
+}
+
+.bienvenue {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: auto;
+    padding-top: 150px;
+    background: transparent;
+}
