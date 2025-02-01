@@ -77,3 +77,50 @@
     padding-top: 150px;
     background: transparent;
 }
+
+.overlay {
+    background: linear-gradient(
+        #0094FF50,
+        #0094FF50 3px,
+        transparent 3px,
+        transparent 9px
+    );
+    background-size: 100% 9px;
+    background-repeat: repeat-y;
+
+    animation: pan-overlay 22s linear infinite;
+}
+
+#liste-bg {
+    position: fixed; /* Covers the full screen */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#liste-bg::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -60%;
+    left: -60%;
+    
+    background: url(energy.png);
+    background-size: 250px 250px; /* Increase size to add spacing */
+    background-repeat: repeat;
+
+    transform: rotate(45deg);
+}
+
+@keyframes pan-overlay {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% -100%;
+    }
+}

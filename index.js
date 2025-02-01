@@ -123,11 +123,10 @@ window.addEventListener("scroll", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundContainer = document.getElementById("background-container");
   const imageUrl = "Poké_Ball_icon-Photoroom.png";
-  const secretUrl = "https://shorturl.at/0QOiF";
 
   for (let i = 0; i < 20; i++) {
     const bgImage = document.createElement("div");
-    bgImage.style.backgroundImage = `url(${Math.floor(Math.random() * 40) == 1 ? secretUrl : imageUrl})`;
+    bgImage.style.backgroundImage = `url(${imageUrl})`;
     bgImage.style.backgroundSize = "cover";
     bgImage.style.backgroundPosition = "center";
     bgImage.classList.add("absolute", "w-64", "h-64",);
