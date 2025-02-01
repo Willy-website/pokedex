@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://images.genius.com/2faa10ad26cca1237d8156e71e820db8.488x488x1.png">
     <script defer src="liste.js"></script>
+    <script defer src="index.js"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="ciel bg-gray-900">
+<body class="ciel elchiki bg-gray-900 relative min-w-[100vw]">
 
-    <nav class="bg-gray-800 p-4 sticky top-0 z-50">
+    <nav class="bg-gray-800 p-4 sticky top-0 z-50 px-16">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-2 cursor-no-drop">
                 <img src="images.png" alt="Logo" class="w-28 h-12">
@@ -29,14 +30,13 @@
         </div>
     </nav>
     <div class="flex justify-center items-center pt-[75px]">
-        <h1 class="text-yellow-500 p-6 rounded-xl shadow-2xl text-2xl font-semibold border-2 border-yellow-500">Voici le
-            Pokedex complet !</h1>
+        <h1 class="text-yellow-500 p-6 rounded-xl shadow-2xl text-3xl font-semibold border-2 border-yellow-500 bg-gray-800">Voici le Pokedex complet !</h1>
     </div>
     <div class="flex justify-center items-center mb-8">
         <div class="pokedex"></div>
     </div>
-    <iframe width="1276" height="720" src="https://www.youtube.com/embed/lECiG-LlFFo" frameborder="0" allowfullscreen
-        id="back" class="mx-auto my-24 border-2 border-yellow-500 rounded-xl"></iframe>
+
+    <div id="liste-bg"></div>
 </body>
 
 </html>
