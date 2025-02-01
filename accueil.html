@@ -1,12 +1,17 @@
+<!-- CODE ELCHIKI -->
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="https://yt3.ggpht.com/a/AGF-l79WOYXn6EHI8La7L_rMrYgEk2tLcv8SqKqc=s900-c-k-c0xffffffff-no-rj-mo">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="ciel bg-gray-900 overflow-hidden">
 
     <div class="absolute inset-0 z-0 bg-center" id="background-container"></div>
@@ -16,33 +21,36 @@
             <div class="flex items-center space-x-2">
                 <img src="images.png" alt="Logo" class="w-28 h-12">
             </div>
-            <div class="md:flex space-x-6 hidden" id="menu">
-                <a href="accueil.html" class="text-white hover:text-yellow-500">Accueil</a>
-                <a href="pokedex.html" class="text-white hover:text-yellow-500">Pokédex</a>
-                <a href="liste.html" class="text-white hover:text-yellow-500">Liste Pokémon</a>
+            <div class="md:flex space-x-6 hidden">
+                <a href="accueil.html" class="text-white hover:text-yellow-500 menu">Accueil</a>
+                <a href="pokedex.html" class="text-white hover:text-yellow-500 menu">Pokédex</a>
+                <a href="liste.html" class="text-white hover:text-yellow-500 menu">Liste Pokémon</a>
             </div>
             <button id="hamburger" class="text-white focus:outline-none md:hidden">
-                <img src="Poké_Ball_icon-Photoroom.png" alt="Menu" class="w-8 h-8 transform transition-transform duration-300" id="hamburger-img">
+                <img src="Poké_Ball_icon-Photoroom.png" alt="Menu"
+                    class="w-8 h-8 transform transition-transform duration-300" id="hamburger-img">
             </button>
         </div>
     </nav>
 
     <div class="bienvenue">
 
-    <div class="relative z-10 bg-gray-900 p-8 rounded-lg border-2 border-yellow-500 shadow-lg w-[50%] text-center">
-        <h1 class="text-3xl font-bold text-yellow-400">Bienvenue sur le Pokédex Interactif</h1>
-        <p class="mt-4 text-gray-300">Découvrez tous les Pokémon et leurs types grâce à notre Pokédex interactif.</p>
+        <div class="relative z-10 bg-gray-900 p-8 rounded-lg border-2 border-yellow-500 shadow-xl w-[50%] text-center">
+            <h1 class="text-3xl font-bold text-yellow-400">Bienvenue sur le Pokédex Interactif</h1>
+            <p class="mt-4 text-gray-300">Découvrez tous les Pokémon et leurs types grâce à notre Pokédex interactif.
+            </p>
 
-        <div class="mt-6">
-            <h2 class="text-2xl font-semibold text-red-400">📕 Pokédex</h2>
-            <p class="text-gray-300">Le Pokédex affiche chaque Pokémon avec un effet de couleur selon ses types.</p>
-        </div>
+            <div class="mt-6">
+                <h2 class="text-2xl font-semibold text-red-400">📕 Pokédex</h2>
+                <p class="text-gray-300">Le Pokédex affiche chaque Pokémon avec un effet de couleur selon ses types.</p>
+            </div>
 
-        <div class="mt-6">
-            <h2 class="text-2xl font-semibold text-blue-400">🔍 Liste des Pokémon</h2>
-            <p class="text-gray-300">Affiche tous les Pokémon avec leurs types et un effet dégradé dynamique.</p>
+            <div class="mt-6">
+                <h2 class="text-2xl font-semibold text-blue-400">🔍 Liste des Pokémon</h2>
+                <p class="text-gray-300">Affiche tous les Pokémon avec leurs types et un effet dégradé dynamique.</p>
+            </div>
         </div>
     </div>
-</div>
 </body>
+
 </html>

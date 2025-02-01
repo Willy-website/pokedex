@@ -25,7 +25,10 @@ const typeColors = {
   Acier: "bg-gray-500",
   Fée: "bg-pink-300",
 };
-
+const back = document.getElementById("back");
+const timer = setTimeout(() => {
+  back.style.display = "block";
+}, 4000);
 // Fonction pour récupérer les Pokémon et les afficher
 fetch(apiLink)
   .then((res) => res.json())
@@ -39,7 +42,7 @@ fetch(apiLink)
 
       // Création de la carte Pokémon
       const card = document.createElement("div");
-      card.classList.add("card", "p-4", "rounded-lg", "shadow-lg", "text-white", "text-center");
+      card.classList.add("card", "p-4", "rounded-lg", "shadow-lg", "text-white", "text-center", "hover:animate-pulse");
 
       // Récupération du premier type pour la couleur de fond
       const primaryType = types[0].name; // Ex: "Feu", "Eau", "Plante"...
@@ -70,4 +73,5 @@ fetch(apiLink)
       pokedex.append(card);
     });
   })
+
   .catch((err) => console.log(err));
