@@ -141,4 +141,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 });
-return () => clearTimeout(timer);
