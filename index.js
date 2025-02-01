@@ -45,7 +45,6 @@ fetch(apiLink)
       // Création de la carte Pokémon
       const card = document.createElement("div");
       card.classList.add("relative", "rounded-lg", "shadow-lg", "p-2", "text-white", "text-center", "transition-all", "duration-300");
-      
       // Gestion des couleurs de fond
       if (secondaryType) {
         card.style.background = `linear-gradient(to right, ${typeColors[primaryType]} 50%, ${typeColors[secondaryType]} 50%)`;
@@ -56,7 +55,7 @@ fetch(apiLink)
       // Image Pokémon
       const cardImage = document.createElement("img");
       cardImage.src = image;
-      cardImage.classList.add("mx-auto", "w-20", "h-20");
+      cardImage.classList.add("mx-auto", "w-32", "h-32");
 
       // Nom du Pokémon
       const cardName = document.createElement("h2");
@@ -98,58 +97,47 @@ fetch(apiLink)
   })
   .catch((err) => console.log(err));
 
-  const hamburger = document.getElementById("hamburger");
+const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 const hamburgerImg = document.getElementById("hamburger-img");
 
 // Fonction pour ouvrir et fermer le menu avec animation de rotation
 hamburger.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("flex");
+  menu.classList.toggle("hidden");
+  menu.classList.toggle("flex");
 
-    // Ajouter/retirer la classe de rotation
-    hamburgerImg.classList.toggle("rotate-180");
+  // Ajouter/retirer la classe de rotation
+  hamburgerImg.classList.toggle("rotate-180");
 });
-
 // Fonction pour fermer le menu lorsque l'utilisateur scroll
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 0 && !menu.classList.contains("hidden")) {
-        menu.classList.add("hidden");
-        menu.classList.remove("flex");
+  if (window.scrollY > 0 && !menu.classList.contains("hidden")) {
+    menu.classList.add("hidden");
+    menu.classList.remove("flex");
 
-        // Réinitialiser l'animation de rotation
-        hamburgerImg.classList.remove("rotate-180");
-    }
+    // Réinitialiser l'animation de rotation
+    hamburgerImg.classList.remove("rotate-180");
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundContainer = document.getElementById("background-container");
-  const imageUrl = "Poké_Ball_icon-Photoroom.png"; 
+  const imageUrl = "Poké_Ball_icon-Photoroom.png";
+  const secretUrl = "https://shorturl.at/0QOiF";
 
   for (let i = 0; i < 20; i++) {
-      const bgImage = document.createElement("div");
-      bgImage.style.backgroundImage = `url(${imageUrl})`;
-      bgImage.style.backgroundSize = "cover";
-      bgImage.style.backgroundPosition = "center";
-      bgImage.classList.add("absolute", "w-64", "h-64",);
+    const bgImage = document.createElement("div");
+    bgImage.style.backgroundImage = `url(${Math.floor(Math.random() * 40) == 1 ? secretUrl : imageUrl})`;
+    bgImage.style.backgroundSize = "cover";
+    bgImage.style.backgroundPosition = "center";
+    bgImage.classList.add("absolute", "w-64", "h-64",);
 
-      // Positionnement aléatoire
-      bgImage.style.top = `${Math.random() * 100}%`;
-      bgImage.style.left = `${Math.random() * 100}%`;
-      bgImage.style.transform = `rotate(${Math.random() * 360}deg)`;
+    // Positionnement aléatoire
+    bgImage.style.top = `${Math.random() * 100}%`;
+    bgImage.style.left = `${Math.random() * 100}%`;
+    bgImage.style.transform = `rotate(${Math.random() * 360}deg)`;
 
-      backgroundContainer.appendChild(bgImage);
+    backgroundContainer.appendChild(bgImage);
 
-    }
-  });
-
-
-
-
-
-
-
-
-
-
-
+  }
+});

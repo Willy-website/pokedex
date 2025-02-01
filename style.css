@@ -1,15 +1,10 @@
-
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-
-img {
-    cursor: pointer;
-    
 }
 
 .pokemon-container {
@@ -28,29 +23,29 @@ img {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    -webkit-box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
-    -moz-box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
-    box-shadow: -8px 9px 18px -11px rgba(0,0,0,0.61);
+    -webkit-box-shadow: -8px 9px 18px -11px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: -8px 9px 18px -11px rgba(0, 0, 0, 0.61);
+    box-shadow: -8px 9px 18px -11px rgba(0, 0, 0, 0.61);
     cursor: pointer;
     padding-bottom: 10%;
     width: 350px;
     height: 300px;
-
-    
-    
+    transition: all;
+    transition-duration: 350ms;
 }
 
 .card:hover {
     background-color: #EAB308;
     scale: 1.05;
-    transition: all;
-    transition-duration: 350ms;
+}
 
+#back {
+    display: none;
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .img {
@@ -65,11 +60,13 @@ img {
     padding-top: 100px;
 }
 
-#menu:hover {
+.menu:hover {
     scale: 1.05;
+}
+
+.menu {
     transition: all;
     transition-duration: 300ms;
-
 }
 
 .bienvenue {
